@@ -3810,8 +3810,15 @@ function Kill( victim, triggerArgs )
 	end
 	ClearEffect({ Id = victim.ObjectId, All = true, BlockAll = true, ResetAllegiance = not victim.AlwaysTraitor })
 	EffectPostClearAll( victim )
-	if victim ~= CurrentRun.Hero then
+--[[ 	if victim ~= CurrentRun.Hero then
 		KillEnemy( victim, triggerArgs )
+	end ]]--
+	local debugBoons = { "AphroditeUpgrade", "ApolloUpgrade", "AresUpgrade", "DemeterUpgrade", "HephaestusUpgrade", "HeraUpgrade", "HermesUpgrade", "HestiaUpgrade", "PoseidonUpgrade", "ZeusUpgrade", "StackUpgrade", "WeaponUpgrade" } 
+	if victim ~= CurrentRun.Hero then 
+	KillEnemy( victim, triggerArgs ) 
+	if(RandomChance(0.01)) then --此数值为生成祝福概率
+	CreateLoot({ Name = debugBoons[math.random(1,#debugBoons)], DestinationId = CurrentRun.Hero.ObjectId, OffsetX = math.random(0,0), OffsetY = math.random(0,0)}) 
+	end 
 	end
 
 	for k, encounter in ipairs( currentRoom.ActiveEncounters ) do
@@ -5207,4 +5214,5 @@ function AmmoPackPickupTrigger(ammoPack, args)
 	if zag ~= nil then
 		AmmoPackPickup(ammoPack, zag, args)
 	end
+
 end
