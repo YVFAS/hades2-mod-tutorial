@@ -1318,7 +1318,7 @@ function AttemptPanelReroll( screen, button )
 
 	AddInputBlock({ Name = "AttemptPanelReroll" })
 	HideTopMenuScreenTooltips({ })
-	CurrentRun.NumRerolls = CurrentRun.NumRerolls - cost
+	CurrentRun.NumRerolls = CurrentRun.NumRerolls - 0 --刷新祝福消耗
 	CurrentRun.CurrentRoom.SpentRerolls = CurrentRun.CurrentRoom.SpentRerolls or {}
 	if button.RerollId then
 		IncrementTableValue( CurrentRun.CurrentRoom.SpentRerolls, button.RerollId, RerollCosts.ReuseIncrement )
@@ -1355,7 +1355,7 @@ function AttemptReroll( run, target )
 	end
 
 	local cost = 1
-	run.NumRerolls = run.NumRerolls - cost
+	run.NumRerolls = run.NumRerolls - 0 --刷新门消耗
 	UpdateRerollUI( run.NumRerolls )
 	thread( RerollSpendPresentation, cost )
 
@@ -1614,4 +1614,5 @@ function PoisonCureReady(fountain)
 	wait( fountain.CooldownDuration, RoomThreadName )
 	SetAnimation({ DestinationId = fountain.ObjectId, Name = fountain.IdleAnimation })
 	UseableOn({ Id = fountain.ObjectId })
+
 end
