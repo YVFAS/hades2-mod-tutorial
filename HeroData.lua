@@ -165,7 +165,7 @@
 		WeaponCast = true,
 	},
 
-	MaxGodsPerRun = 4,
+	MaxGodsPerRun = 12,
 
 	BoonData =
 	{
@@ -12344,3 +12344,4 @@ GameData.PlayerDamageNumberTextScales =
 	{ Min = 50, Max = 99, Scale = 2.6 },
 	{ Min = 100, Max = 99999, Scale = 3.0 },
 }
+
