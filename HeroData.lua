@@ -185,7 +185,7 @@
 			Duo = 0.12,
 			Legendary = 0.10,
 		},
-		ReplaceChance = 0.1,
+		ReplaceChance = 0.15, --概率最大修改为1
 	},
 	HermesData =
 	{
@@ -12344,3 +12344,4 @@ GameData.PlayerDamageNumberTextScales =
 	{ Min = 50, Max = 99, Scale = 2.6 },
 	{ Min = 100, Max = 99999, Scale = 3.0 },
 }
+
