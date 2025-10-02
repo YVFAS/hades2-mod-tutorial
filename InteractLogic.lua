@@ -1,4 +1,3 @@
-
 function UseWeaponKit( weaponKit, args, user )
 	args = args or {}
 	if CurrentRun.Hero.Weapons[weaponKit.Name] ~= nil then
@@ -1472,7 +1471,12 @@ function AttemptRerollShipWheel( run, wheel )
 	end
 
 	wheel.ChosenRewardType = ChooseRoomReward( CurrentRun, CurrentRun.CurrentRoom, wheel.RewardStoreName, rewardsChosen, { IgnoreForcedReward = true } )
-	SetupRoomReward( CurrentRun, wheel.Room, rewardsChosen, { ChosenRewardType = wheel.ChosenRewardType, AlwaysSetupForceLootName = true } )
+	local ChosenRewardTypeList = { "AphroditeUpgrade", "ApolloUpgrade", "AresUpgrade", "DemeterUpgrade", "HephaestusUpgrade", "HeraUpgrade", "HermesUpgrade", "HestiaUpgrade", "PoseidonUpgrade", "ZeusUpgrade","StackUpgrade", "WeaponUpgrade", "MaxHealthDrop", "MaxManaDrop", "RoomMoneyDrop", "SpellDrop", "TalentDrop" }
+	if(run.RollIndex == nil) then 
+	run.RollIndex = 0 
+	end
+	wheel.ChosenRewardType = ChosenRewardTypeList[run.RollIndex % # ChosenRewardTypeList + 1]
+	SetupRoomReward( CurrentRun, wheel.Room, rewardsChosen, { ChosenRewardType = wheel.ChosenRewardType, AlwaysSetupForceLootName = true } ) --
 	wheel.ForceLootName = wheel.Room.ForceLootName
 
 	CreateDoorRewardPreview( wheel, wheel.ChosenRewardType, wheel.ForceLootName, nil, { ReUseIds = true } )
@@ -1614,4 +1618,5 @@ function PoisonCureReady(fountain)
 	wait( fountain.CooldownDuration, RoomThreadName )
 	SetAnimation({ DestinationId = fountain.ObjectId, Name = fountain.IdleAnimation })
 	UseableOn({ Id = fountain.ObjectId })
+
 end
