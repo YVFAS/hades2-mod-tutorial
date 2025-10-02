@@ -180,10 +180,10 @@
 		ForceCommon = false,
 		RarityChances = 
 		{
-			Rare = 0.10,
-			Epic = 0.05,
-			Duo = 0.12,
-			Legendary = 0.10,
+			Rare = 0.30, --稀有
+			Epic = 0.30, --史诗
+			Duo = 0.30, --双重
+			Legendary = 0.30, --传奇，概率最大修改为1
 		},
 		ReplaceChance = 0.1,
 	},
@@ -192,9 +192,9 @@
 		ForceCommon = false,
 		RarityChances = 
 		{
-			Rare = 0.06,
-			Epic = 0.03,
-			Legendary = 0.01,
+			Rare = 0.30, --稀有
+			Epic = 0.30, --史诗
+			Legendary = 0.30, --传奇，概率最大修改为1
 		},
 	},
 	StackData =
@@ -12344,3 +12344,4 @@ GameData.PlayerDamageNumberTextScales =
 	{ Min = 50, Max = 99, Scale = 2.6 },
 	{ Min = 100, Max = 99999, Scale = 3.0 },
 }
+
