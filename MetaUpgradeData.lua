@@ -363,13 +363,6 @@ MetaUpgradeCardData =
 			{ GlobalVoiceLines = "CardInspectVoiceLines" },
 		},
 
-		AutoEquipRequirements = 
-		{
-			SurroundEquipped = true,
-			MetaUpgradeName = "SorceryRegenUpgrade"
-		},
-		AutoEquipText = "SorceryRegenUpgrade_AutoEquip",
-
 		FlavorTextData = 
 		{
 			{
@@ -511,12 +504,7 @@ MetaUpgradeCardData =
 			{ CardUpgradePoints = 1 },
 			{ CardUpgradePoints = 3, MixerPBoss = 1, },
 		},
-		--[[
-		AutoEquipRequirements = 
-		{
-			MinDuplicateCount = 3,
-		},
-		]]
+
 		TraitName = "DodgeBonusMetaUpgrade",
 		CustomTrayText = "DodgeBonusMetaUpgrade_Tray",
 
@@ -545,7 +533,6 @@ MetaUpgradeCardData =
 			{ GlobalVoiceLines = "CardInspectVoiceLines" },
 		},
 
-		--AutoEquipText = "BonusDodge_AutoEquip",
 		FlavorTextData = 
 		{
 			{
@@ -800,13 +787,7 @@ MetaUpgradeCardData =
 			{ CardUpgradePoints = 6, MixerOBoss = 1 },
 		},
 
-		AutoEquipRequirements = 
-		{
-			HasCostsThrough = 5
-		},
 		TraitName = "ChamberHealthMetaUpgrade",
-
-		AutoEquipText = "MaxHealthPerRoom_AutoEquip",
 
 		UnlockedCardVoiceLines =
 		{
@@ -1190,11 +1171,7 @@ MetaUpgradeCardData =
 			{ CardUpgradePoints = 2 },
 			{ CardUpgradePoints = 4, MixerGBoss = 2, },
 		},
-		AutoEquipRequirements = 
-		{
-			MaxDuplicateCount = 2,
-			RequiredMetaUpgradesMin = 1,
-		},
+
 		TraitName = "DuoRarityBoostMetaUpgrade",
 		CustomTrayText = "DuoRarityBoostMetaUpgrade_Tray",
 
@@ -1222,7 +1199,6 @@ MetaUpgradeCardData =
 			{ GlobalVoiceLines = "CardInspectVoiceLines" },
 		},
 
-		AutoEquipText = "BonusRarity_AutoEquip",
 		FlavorTextData = 
 		{
 			{
@@ -1281,13 +1257,6 @@ MetaUpgradeCardData =
 			{ GlobalVoiceLines = "CardInspectVoiceLines" },
 		},
 
-		AutoEquipRequirements = 
-		{
-			SurroundAllEquipped = true,
-			MetaUpgradeName = "TradeOff"
-		},
-
-		AutoEquipText = "TradeOff_AutoEquip",
 		FlavorTextData = 
 		{
 			{
@@ -1424,14 +1393,6 @@ MetaUpgradeCardData =
 			MixerOBoss = 1,
 		},
 		TraitName = "EpicRarityBoostMetaUpgrade",
-		
-		AutoEquipText = "EpicRarity_AutoEquip_Alt",
-		AutoEquipRequirements = 
-		{
-			MetaUpgradeName = "EpicRarityBoost",
-			OtherRowOrColumnEquipped = true,
-			CardsRequired = 5, -- used for text
-		},
 
 		UpgradeResourceCost = 
 		{
@@ -1487,13 +1448,6 @@ MetaUpgradeCardData =
 			MixerPBoss = 1,
 		},
 		TraitName = "BossProgressionMetaUpgrade",
-		
-		AutoEquipText = "CardDraw_AutoEquip",
-		AutoEquipRequirements = 
-		{
-			RequiredMetaUpgradesMax = 3,
-			RequiredMetaUpgradesMin = 1,
-		},
 
 		UpgradeResourceCost = 
 		{
@@ -2092,4 +2046,5 @@ FatedDisableMetaUpgrades =
 	DoorReroll = true,
 	ScreenReroll = true,
 	TradeOff = true,
+
 }
