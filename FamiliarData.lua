@@ -3264,7 +3264,7 @@ TraitSetData.Familiar =
 	{
 		InheritFrom = { "FamiliarTrait" },
 		Icon = "FamiliarIcon_Raven",
-		OutgoingUnmodifiedCritBonus = { BaseValue = 0.01 },
+		OutgoingUnmodifiedCritBonus = { BaseValue = 0.25 },
 		OnEnemyCrittedFunction =
 		{
 			Name = "ClearRavenMark",
@@ -3593,3 +3593,4 @@ TraitSetData.Familiar =
 
 OverwriteTableKeys( EnemyData, FamiliarData )
 OverwriteTableKeys( TraitData, TraitSetData.Familiar )
+
