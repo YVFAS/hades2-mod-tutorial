@@ -3491,10 +3491,10 @@ TraitSetData.Familiar =
 		{
 			{
 				LifeProperty = "DodgeChance",
-				BaseValue = 0.03,
+				BaseValue = 0.25,
 				AbsoluteStackValues =
 				{
-					[1] = 0.01,
+					[1] = 0.25,
 				},
 				ChangeType = "Add",
 				DataValue = false,
@@ -3503,10 +3503,10 @@ TraitSetData.Familiar =
 			{
 				UnitProperty = "Speed",
 				ChangeType = "Multiply",
-				BaseValue = 1.03,
+				BaseValue = 1.25,
 				AbsoluteStackValues =
 				{
-					[1] = 0.01,
+					[1] = 0.25,
 				},
 			},
 		},
@@ -3593,3 +3593,4 @@ TraitSetData.Familiar =
 
 OverwriteTableKeys( EnemyData, FamiliarData )
 OverwriteTableKeys( TraitData, TraitSetData.Familiar )
+
