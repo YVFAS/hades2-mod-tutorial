@@ -2333,7 +2333,7 @@ TraitSetData.Keepsakes =
 			RequireFated = true,
 			RequireNotExcludeFromLastRunBoon = true,
 			MultiUse = true,
-			Uses = { BaseValue = 2 },
+			Uses = { BaseValue = 999 },
 			MaxRarity = 3,
 			ReportValues = 
 			{ 
@@ -3343,6 +3343,7 @@ TraitSetData.Keepsakes =
 		},
 	},
 }
+
 
 
 OverwriteTableKeys( TraitData, TraitSetData.Keepsakes )
