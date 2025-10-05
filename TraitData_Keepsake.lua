@@ -2420,7 +2420,7 @@ TraitSetData.Keepsakes =
 			}
 		},
 		Icon = "Keepsake_58",
-		FatedBoonLevelBonus = { BaseValue = 1,},
+		FatedBoonLevelBonus = { BaseValue = 5,},
 		SwapInvalidateCheckpoint = true,
 		AcquireFunctionName = "GiveRandomHadesBoonAndBoostBoons",
 		Permanent = true,
@@ -3343,6 +3343,7 @@ TraitSetData.Keepsakes =
 		},
 	},
 }
+
 
 
 OverwriteTableKeys( TraitData, TraitSetData.Keepsakes )
